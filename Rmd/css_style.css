@@ -79,7 +79,7 @@ img, video, iframe {
 
 
 /* progress bar */
-.remark-slide-number {
+/*.remark-slide-number {
   position: inherit;
 }
 
@@ -95,7 +95,7 @@ img, video, iframe {
 .remark-slide-number .progress-bar {
   height: 100%;
   background-color: #7e715e;
-}
+}*/
 
 
 /* Removes colored bar from top of the slide resulting in a clear slide */
