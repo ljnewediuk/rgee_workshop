@@ -4,7 +4,11 @@ library(reticulate)
 library(rgee)
 library(tidyverse)
 
+# Data
 elk_dat <- readRDS('data/elk_dat.rds')
+
+# Set up Earth Engine credentials
+ee_Initialize(user = 'j.newedi@gmail.com', drive = TRUE)
 
 # Create bounding box around the elk data
 geometry <- st_bbox(elk_dat)
