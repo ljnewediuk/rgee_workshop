@@ -10,7 +10,7 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-    css: [metropolis, metropolis-fonts, "Rmd/css_style.css"]
+    css: [metropolis, metropolis-fonts, "css_style.css"]
 ---
 
 # Advantages of using Earth Engine over R for working with spatial data:
