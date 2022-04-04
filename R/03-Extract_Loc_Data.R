@@ -1,4 +1,4 @@
-
+# Packages
 library(sf)
 library(reticulate)
 library(rgee)
@@ -29,10 +29,10 @@ ndvi <- ee$
   select('NDVI')$reduce(ee$Reducer$mean())
 
 # Extract mean NDVI at each location point
-ndvi_samples <- ee_extract(ndvi, elk_dat_ee)
+ndvi_samples <- ee_extract(ndvi, elk_dat_ee, scale = 1000)
 
 # We can even extract NDVI directly from the sf object
-ndvi_samples_from_sf <- ee_extract(ndvi, elk_dat)
+ndvi_samples_from_sf <- ee_extract(ndvi, elk_dat, scale = 1000)
 
 # View location data
 head(ndvi_samples, n = 10)
