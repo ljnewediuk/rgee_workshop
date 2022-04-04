@@ -5,9 +5,10 @@
     <meta charset="utf-8" />
     <meta name="author" content="Levi Newediuk" />
     <meta name="date" content="2022-04-04" />
+    <script src="rgee_slides_files/header-attrs-2.11.3/header-attrs.js"></script>
     <link href="rgee_slides_files/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
     <link href="rgee_slides_files/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
-    <link rel="stylesheet" href="Rmd/css_style.css" type="text/css" />
+    <link rel="stylesheet" href="css_style.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -26,11 +27,11 @@ class: center, middle, inverse, title-slide
 
 - Much faster for working with large datasets
 
-- Don't have to save huge raster files to your harddrive
+- Don't have to save huge raster files to your hard drive
 
 - Don't need to worry about defining projections
 
-- Free access to hundreds (more?) of hdatasets in one place (&gt; 600 as of 2018)
+- Free access to hundreds (more?) of datasets in one place (&gt; 600 as of 2018)
 
 ???
 
@@ -52,7 +53,7 @@ Browse EE catalog all from one place
 
 - Make nicer maps (use Earth Engine objects with sf, Tidyverse, etc.)
 
-.left-column[
+.pull-left[
 
 ```r
 point &lt;- ee$Geometry$Point(-122.262, 37.8719)
@@ -66,7 +67,7 @@ filteredCollection &lt;- ee$ImageCollection('LANDSAT/LC08/C01/T1')$
 ```
 ]
 
-.right-column[
+.pull-right[
 
 ```js
 var point = ee.Geometry.Point(-122.262, 37.8719);
@@ -112,6 +113,7 @@ ggplot() + geom_sf(data = sf_randomPoints) + theme_bw()
 ```
 
 .center[![Random points plot](rgee_slides_files/figure-html/random_pt_plot.png)]
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
