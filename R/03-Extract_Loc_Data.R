@@ -30,6 +30,9 @@ ndvi <- ee$
 # Extract mean NDVI at each location point
 ndvi_samples <- ee_extract(ndvi, elk_dat_ee)
 
+# We can even extract NDVI directly from the sf object
+ndvi_samples_from_sf <- ee_extract(ndvi, elk_dat)
+
 # View location data
 head(ndvi_samples, n = 10)
 
