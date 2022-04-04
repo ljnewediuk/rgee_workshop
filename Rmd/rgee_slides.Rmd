@@ -17,11 +17,11 @@ output:
 
 - Much faster for working with large datasets
 
-- Don't have to save huge raster files to your harddrive
+- Don't have to save huge raster files to your hard drive
 
 - Don't need to worry about defining projections
 
-- Free access to hundreds (more?) of hdatasets in one place (> 600 as of 2018)
+- Free access to hundreds (more?) of datasets in one place (> 600 as of 2018)
 
 ???
 
@@ -43,7 +43,7 @@ Browse EE catalog all from one place
 
 - Make nicer maps (use Earth Engine objects with sf, Tidyverse, etc.)
 
-.left-column[
+.pull-left[
 ```{r, eval = F}
 point <- ee$Geometry$Point(-122.262, 37.8719)
 
@@ -56,7 +56,7 @@ filteredCollection <- ee$ImageCollection('LANDSAT/LC08/C01/T1')$
 ```
 ]
 
-.right-column[
+.pull-right[
 ```{js, eval = F}
 var point = ee.Geometry.Point(-122.262, 37.8719);
 var start = ee.Date('2014-06-01');
@@ -85,7 +85,7 @@ library(rgee)
 library(tidyverse)
 library(sf)
 
-ee_Initialize(user = 'j.newedi@gmail.com', drive = T)
+ee_Initialize(user = 'j.newedi@gmail.com', drive = TRUE)
 
 ```
 
