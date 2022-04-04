@@ -12,9 +12,6 @@ ee_Initialize(user = 'j.newedi@gmail.com', drive = TRUE)
 
 # Create bounding box around the elk data
 geometry <- st_bbox(elk_dat)
-# Add 2 km buffer
-geometry <- ee$Geometry$Rectangle(geometry[[1]] - 2000, geometry[[2]] - 2000,
-                                  geometry[[3]] + 2000, geometry[[4]] + 2000)
 
 # Convert to EE feature collection
 elk_dat_ee <- elk_dat %>%
