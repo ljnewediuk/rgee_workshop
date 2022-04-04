@@ -1,8 +1,9 @@
-
+# Packages
 library(sf)
 library(reticulate)
 library(rgee)
 library(tidyverse)
+library(RColorBrewer)
 
 # Set up Earth Engine credentials
 ee_Initialize(user = 'j.newedi@gmail.com', drive = T)
@@ -62,6 +63,7 @@ mw_ecoreg_sf <- ee_as_sf(mw_ecoreg)
 
 # Extract NDVI mean for each ecoregion
 ndvi_means <- ee_extract(ndvi, mw_ecoreg_sf, fun = ee$Reducer$mean())
+
 # Join ecoregion sf with mean NDVI
 ndvi_ecoregions <- mw_ecoreg_sf %>%
   left_join(ndvi_means)
