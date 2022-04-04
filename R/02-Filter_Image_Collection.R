@@ -20,10 +20,6 @@ end_dt <- ee$Date('2020-06-30')
 # Import Ecoregions feature collection
 ecoregions <- ee$FeatureCollection("EPA/Ecoregions/2013/L3")
 
-# Import international boundaries feature collection
-usa <- ee$FeatureCollection("USDOS/LSIB_SIMPLE/2017")$
-  filter(ee$Filter$eq("country_co", 'US'))
-
 # Import temperature
 temp <- ee$ImageCollection("OREGONSTATE/PRISM/AN81m")$
   # Select 'tmean' (mean temperature) band
